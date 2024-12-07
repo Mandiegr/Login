@@ -15,6 +15,10 @@ Este é um projeto de login simples desenvolvido com React utilizando o **Vite**
 - **Styled Components** Adicionei para estilizar os componentes visando uma estilização mais limpa e organizada. Antes a estilização estava junto ao componente Login. O Componente Login foi movido para pasta padrão **components**
 
 - **Email e Senha:** test@gmail.com e 123456
+
+- **Modifiquei as cores do Design do Projeto no Figma**
+
+- Design do projeto no Figma: [Figma Design](https://www.figma.com/design/KfO5juWJhYMRqv0hennMun/Untitled?node-id=0-1&t=D9Ai15caNYVpKoBw-1)
 ---
 
 ## 🧰 **Tecnologias Utilizadas**
