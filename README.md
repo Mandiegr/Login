@@ -8,6 +8,13 @@ Este é um projeto de login simples desenvolvido com React utilizando o **Vite**
 🎨 Estilização com **styled-components**.
 
 ---
+## **🌐 Acesse o Projeto**
+
+O projeto está hospedado na **Vercel** e pode ser acessado através do link abaixo:
+
+🔗 [Acesse o Projeto Online](https://login-rust-omega.vercel.app/)
+
+---
 
 ##  **📝 Observações**
 - **Correção do erro de validação do Password:** O operador **!**  no   **!password.length < 6** nega o valor de password, se password tivesse algum valor ele seria false. estava retornado senha inválida, pois no password a lógica pedia que recebesse uma string vázia, undefined ou null e retornária true. **O orreto: if (!password || password.length < 6)**
@@ -26,6 +33,7 @@ Este é um projeto de login simples desenvolvido com React utilizando o **Vite**
 - **[React](https://reactjs.org/)**
 - **[Styled-Components](https://styled-components.com/)**
 
+
 ---
 
 ## ✅ **Pré-requisitos**  
@@ -39,7 +47,7 @@ Antes de iniciar, certifique-se de ter instalado em sua máquina:
 
 ### 1️⃣ Clone o Repositório  
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/Mandiegr/Login.git
 ```
 
 ### 2️⃣ Acesse o Diretório  
