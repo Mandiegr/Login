@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Form, Input, Button, Message } from './login.styles';
+import { Container, Form, Input, Button, Message } from './login.styles';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -37,7 +37,7 @@ const Login = () => {
   };
 
   return (
-    <>
+    <Container>
       <Form onSubmit={handleSubmit}>
         <h2>Login</h2>
         <Input
@@ -55,7 +55,7 @@ const Login = () => {
         <Button type="submit">Entrar</Button>
         {message && <Message success={success}>{message}</Message>}
       </Form>
-    </>
+    </Container>
   );
 };
 

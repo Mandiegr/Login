@@ -1,50 +1,66 @@
 import styled from 'styled-components';
 
+const primaryColor = "#DED8CC";
+const borderColor = "#8f8a8a";
+const buttonColor = "#8F967F";
+const buttonHoverColor = "#6b705f";
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f5f5f5;
 `;
 
 export const Form = styled.form`
-  background-color: #f0ce0c;
+  background-color: ${primaryColor};
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
-  display: flex;
+  max-width: 400px; 
   flex-direction: column;
   align-items: center;
+
+
 `;
 
-export const Input = styled.input`
+export const FormElement = styled.div`
   width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #000;
+  padding: 12px;
+  margin: 12px 0;
   border-radius: 4px;
+  font-size: 16px;
 `;
 
-export const Button = styled.button`
-  width: 95%;
-  padding: 10px;
-  background-color: #000;
+export const Input = styled(FormElement).attrs({
+  as: 'input',
+})`
+  border: 1px solid ${borderColor};
+`;
+
+export const Button = styled(FormElement).attrs({
+  as: 'button',
+})`
+  background-color: ${buttonColor};
   color: white;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #3b3412;
+    background-color: ${buttonHoverColor};
+  }
+
+  @media (max-width: 767px) {
+    padding: 10px;
+    font-size: 14px;
   }
 `;
 
 export const Message = styled.p`
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 14px;
   color: ${(props) => (props.success ? 'green' : 'red')};
+  text-align: center;
 `;
