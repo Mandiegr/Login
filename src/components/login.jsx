@@ -21,7 +21,7 @@ const Login = () => {
       return;
     }
 
-    if (!password || !password.length < 6) {
+    if (!password || password.length < 6) {
       setMessage('A senha deve ter no mínimo 6 caracteres.');
       setIsSuccess(false);
       return;
