@@ -42,13 +42,13 @@ const Login = () => {
         <h2>Login</h2>
         <Input
           type="email"
-          placeholder="Digite seu e-mail"
+          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <Input
           type="password"
-          placeholder="Digite sua senha"
+          placeholder="Senha"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />

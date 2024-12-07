@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
-const primaryColor = "#DED8CC";
-const borderColor = "#8f8a8a";
+const primaryColor = "#ffffff";
 const buttonColor = "#8F967F";
-const buttonHoverColor = "#6b705f";
+const buttonHoverColor = "#565e51";
+const inputBorderColor = "#B0B0B0"; 
+const inputBorderFocusColor = "#5E6C54"; 
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  
 `;
 
 export const Form = styled.form`
@@ -18,11 +20,9 @@ export const Form = styled.form`
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px; 
+  max-width: 400px;
   flex-direction: column;
   align-items: center;
-
-
 `;
 
 export const FormElement = styled.div`
@@ -36,7 +36,23 @@ export const FormElement = styled.div`
 export const Input = styled(FormElement).attrs({
   as: 'input',
 })`
-  border: 1px solid ${borderColor};
+  padding: 10px 12px;
+  border: 2px solid ${inputBorderColor};
+  background-color: #F9F9F9; 
+  color: ${buttonColor };
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: ${inputBorderFocusColor};
+    background-color: #fff; 
+  }
+
+  &:hover {
+    border-color: ${inputBorderFocusColor};
+  }
 `;
 
 export const Button = styled(FormElement).attrs({
@@ -46,6 +62,9 @@ export const Button = styled(FormElement).attrs({
   color: white;
   border: none;
   cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 16px;
   transition: background-color 0.3s ease;
 
   &:hover {
